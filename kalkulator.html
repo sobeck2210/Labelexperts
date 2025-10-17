@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Kalkulator online etykiet - Labelexperts</title>
+  </head>
+  <body>
+     <header class="site-header">
+      <div class="header_container">
+        <div class="header_search">
+          <form action="#" class="search-form">
+            <input
+              type="text"
+              placeholder="Szukaj produktów..."
+              class="search-input"
+            />
+            <button type="submit" class="search-btn" aria-label="Szukaj">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M10 2a8 8 0 015.292 13.708l4.5 4.5-1.414 1.414-4.5-4.5A8 8 0 1110 2zm0 2a6 6 0 100 12A6 6 0 0010 4z"
+                />
+              </svg>
+            </button>
+          </form>
+        </div>
+
+        <div class="header_logo">
+          <img class="header_logo_img" src="img/Logo/logo_Label_Experts.webp" />
+        </div>
+
+        <div class="header_info_for_client">
+          <div class="header_phone">
+            <div class="header-phone-icon">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+            <div class="header_phone_info">
+              <p class="header_small_text">Zadzwoń</p>
+              <a href="tel:+48123132123" class="link header-link"
+                >+48 452 442 490</a
+              >
+            </div>
+          </div>
+          <div class="header_mail">
+            <div class="header-mail-icon">
+              <ion-icon name="mail-unread-outline"></ion-icon>
+            </div>
+            <div class="header_mail_info">
+              <p class="header_small_text">Napisz do nas</p>
+              <a href="mailto:sklep@labelexperts.pl" class="link header-link"
+                >sklep@labelexperts.pl</a
+              >
+            </div>
+          </div>
+          <div class="header_cart">
+            <ion-icon name="cart"></ion-icon>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="navigation">
+        <div class="navlinks">
+            <nav class="nav">
+    <ul class="nav__list">
+      <li class="nav__item">
+        <button class="nav__link" aria-expanded="false">
+          Etykiety
+          <ion-icon name="chevron-down-outline"></ion-icon>
+        </button>
+        <ul class="nav__dropdown">
+          <li><a href="#">Etykiety samoprzylepne</a></li>
+          <li><a href="#">Taśmy termotransferowe</a></li>
+          <li><a href="#">Drukarki etykiet</a></li>
+          <li><a href="#">Akcesoria</a></li>
+        </ul>
+      </li>
+      </ul>
+       <ul class="nav__list">
+      <li class="nav__item">
+        <button class="nav__link" aria-expanded="false">
+          Opakowania elastyczne
+          <ion-icon name="chevron-down-outline"></ion-icon>
+        </button>
+        <ul class="nav__dropdown">
+          <li><a href="#">Etykiety samoprzylepne</a></li>
+          <li><a href="#">Taśmy termotransferowe</a></li>
+          <li><a href="#">Drukarki etykiet</a></li>
+          <li><a href="#">Akcesoria</a></li>
+        </ul>
+      </li>
+      </ul>
+       <ul class="nav__list">
+      <li class="nav__item">
+        <button class="nav__link" aria-expanded="false">
+          Centrum pomocy
+          <ion-icon name="chevron-down-outline"></ion-icon>
+        </button>
+        <ul class="nav__dropdown">
+          <li><a href="#">Jak przygotować plik?</a></li>
+          <li><a href="#">Taśmy termotransferowe</a></li>
+          <li><a href="#">Drukarki etykiet</a></li>
+          <li><a href="#">Akcesoria</a></li>
+        </ul>
+      </li>
+      </ul>
+       <ul class="nav__list">
+      <li class="nav__item">
+        <button class="nav__link" aria-expanded="false">
+          Materiały
+          <ion-icon name="chevron-down-outline"></ion-icon>
+        </button>
+        <ul class="nav__dropdown">
+          <li><a href="#">Etykiety samoprzylepne</a></li>
+          <li><a href="#">Taśmy termotransferowe</a></li>
+          <li><a href="#">Drukarki etykiet</a></li>
+          <li><a href="#">Akcesoria</a></li>
+        </ul>
+      </li>
+      </ul>
+       <ul class="nav__list">
+      <li class="nav__item">
+        <button class="nav__link" aria-expanded="false">
+          Uszlachetnienia
+          <ion-icon name="chevron-down-outline"></ion-icon>
+        </button>
+        <ul class="nav__dropdown">
+          <li><a href="#">Etykiety samoprzylepne</a></li>
+          <li><a href="#">Taśmy termotransferowe</a></li>
+          <li><a href="#">Drukarki etykiet</a></li>
+          <li><a href="#">Akcesoria</a></li>
+        </ul>
+      </li>
+      </ul>
+       <ul class="nav__list">
+      <li class="nav__item">
+        <button class="nav__link" aria-expanded="false">
+          Skontaktuj się
+          <ion-icon name="chevron-down-outline"></ion-icon>
+        </button>
+        <ul class="nav__dropdown">
+          <li><a href="#">Etykiety samoprzylepne</a></li>
+          <li><a href="#">Taśmy termotransferowe</a></li>
+          <li><a href="#">Drukarki etykiet</a></li>
+          <li><a href="#">Akcesoria</a></li>
+        </ul>
+      </li>
+      </ul>
+            </nav>
+        </div>
+      </div>
+    </section>
+    <div class="container">
+      <div class="navigation-steps">
+        <a href="index.html" class="step">Strona główna</a>
+        <ion-icon name="play-outline"></ion-icon>
+        <a href="kalkulator.html"class="step-active">Kalkulator etykiet online</a>
+      </div>
+      <h1 class="product-header">Kalkulator etykiety online - wyceń swoją etykietę. </h1>
+      <div class="product-calculator">
+        <div class="parameters">
+      <!-- Szerokość -->
+<div class="parameter-wrapper">
+  <div class="parameter">
+    <div class="parameter-name-centered">
+      <div class="parameter-name">Szerokość:</div>
+    </div>
+    <div class="parameter-value">35mm</div>
+  </div>
+
+  <div class="info-icon">
+    <ion-icon name="information-circle-outline"></ion-icon>
+    <div class="tooltip">Szerokość etykiety mierzona w milimetrach.</div>
+  </div>
+</div>
+
+<!-- Wysokość -->
+<div class="parameter-wrapper">
+  <div class="parameter">
+    <div class="parameter-name-centered">
+      <div class="parameter-name">Wysokość:</div>
+    </div>
+    <div class="parameter-value">165mm</div>
+  </div>
+
+  <div class="info-icon">
+    <ion-icon name="information-circle-outline"></ion-icon>
+    <div class="tooltip">Wysokość etykiety mierzona w milimetrach.</div>
+  </div>
+</div>
+
+<!-- Rodzaj materiału -->
+<div class="parameter-wrapper">
+  <div class="parameter">
+    <div class="parameter-name-centered">
+      <div class="parameter-name">Rodzaj materiału</div>
+      <ion-icon name="chevron-down-outline"></ion-icon>
+    </div>
+
+    <div class="parameter-value">Papier półbłysk, klej odlepny</div>
+
+    <ul class="dropdown">
+      <li>Papier półbłysk, klej odlepny</li>
+      <li>Papier półbłysk, klej trwały</li>
+      <li>Papier 3</li>
+      <li>Papier 4</li>
+      <li>Folia 1</li>
+      <li>Folia 2</li>
+      <li>Folia 3</li>
+      <li>Folia 4</li>
+    </ul>
+  </div>
+
+  <div class="info-icon">
+    <ion-icon name="information-circle-outline"></ion-icon>
+    <div class="tooltip">Dobierz nośnik i klej zależnie od podłoża i warunków.</div>
+  </div>
+</div>
+
+<!-- Rodzaj zadruku -->
+<div class="parameter-wrapper">
+  <div class="parameter">
+    <div class="parameter-name-centered">
+      <div class="parameter-name">Rodzaj zadruku</div>
+      <ion-icon name="chevron-down-outline"></ion-icon>
+    </div>
+
+    <div class="parameter-value">CMYK</div>
+
+    <ul class="dropdown">
+      <li>CMYK</li>
+      <li>CMYK+Biały</li>
+      <li>Dowolny</li>
+    </ul>
+  </div>
+
+  <div class="info-icon">
+    <ion-icon name="information-circle-outline"></ion-icon>
+    <div class="tooltip">CMYK do druku kolorowego; biały podkład dla folii/przezroczystych.</div>
+  </div>
+</div>
+
+<!-- Kształt etykiety -->
+<div class="parameter-wrapper">
+  <div class="parameter">
+    <div class="parameter-name-centered">
+      <div class="parameter-name">Kształt etykiety</div>
+      <ion-icon name="chevron-down-outline"></ion-icon>
+    </div>
+
+    <div class="parameter-value">Koło/owal</div>
+
+    <ul class="dropdown">
+      <li>Koło/owal</li>
+      <li>Kwadrat/prostokąt</li>
+      <li>Dowolny</li>
+    </ul>
+  </div>
+
+  <div class="info-icon">
+    <ion-icon name="information-circle-outline"></ion-icon>
+    <div class="tooltip">Wybierz kształt wykrojnika lub zleć niestandardowy.</div>
+  </div>
+</div>
+
+<!-- Narożniki -->
+<div class="parameter-wrapper">
+  <div class="parameter">
+    <div class="parameter-name-centered">
+      <div class="parameter-name">Narożniki</div>
+      <ion-icon name="chevron-down-outline"></ion-icon>
+    </div>
+
+    <div class="parameter-value">Zaokrąglone</div>
+
+    <ul class="dropdown">
+      <li>Proste</li>
+      <li>Zaokrąglone</li>
+    </ul>
+  </div>
+
+  <div class="info-icon">
+    <ion-icon name="information-circle-outline"></ion-icon>
+    <div class="tooltip">Zaokrąglone lepiej trzymają się i się nie zadzierają.</div>
+  </div>
+</div>
+
+<!-- Laminacja -->
+<div class="parameter-wrapper">
+  <div class="parameter">
+    <div class="parameter-name-centered">
+      <div class="parameter-name">Laminacja</div>
+      <ion-icon name="chevron-down-outline"></ion-icon>
+    </div>
+
+    <div class="parameter-value">Matowa</div>
+
+    <ul class="dropdown">
+      <li>Brak</li>
+      <li>Połysk</li>
+      <li>Matowa</li>
+    </ul>
+  </div>
+
+  <div class="info-icon">
+    <ion-icon name="information-circle-outline"></ion-icon>
+    <div class="tooltip">Laminacja zwiększa odporność na ścieranie i wilgoć.</div>
+  </div>
+</div>
+        </div>
+<div class="pricing-section">
+  <div class="input-wrapper">
+    <label for="naklad">Nakład:</label>
+    <input type="number" id="naklad" name="naklad" placeholder="np. 5000" />
+  </div>
+
+  <table class="price-table">
+    <thead>
+      <tr>
+        <th rowspan="2" class="left-header">Ilość</th>
+        <th colspan="3" class="standard">Standard</th>
+        <th colspan="3" class="express">Express</th>
+      </tr>
+      <tr>
+        <th>Cena/szt.</th>
+        <th>Cena/1000 szt.</th>
+        <th>Cena za nakład</th>
+        <th>Cena za 1 szt.</th>
+        <th>Cena za 1000 szt.</th>
+        <th>Cena za całość</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td class="param-name">5000 szt.</td>
+        <td>0,2472 zł</td>
+        <td>247,2 zł</td>
+        <td>1236 zł</td>
+        <td>0,30 zł</td>
+        <td>300 zł</td>
+        <td>1500 zł</td>
+      </tr>
+
+      <tr>
+        <td class="param-name">15000 szt.</td>
+        <td>0,1882 zł</td>
+        <td>188,2 zł</td>
+        <td>2823 zł</td>
+        <td>0,34 zł</td>
+        <td>340 zł</td>
+        <td>1700 zł</td>
+      </tr>
+      <tr>
+        <td class="param-name">30000 szt.</td>
+        <td>0,1678 zł</td>
+        <td>167,8 zł</td>
+        <td>5034 zł</td>
+        <td>0,34 zł</td>
+        <td>340 zł</td>
+        <td>1700 zł</td>
+      </tr>
+      <tr>
+        <td class="param-name">50000 szt.</td>
+        <td>0,1678 zł</td>
+        <td>167,8 zł</td>
+        <td>5034 zł</td>
+        <td>0,34 zł</td>
+        <td>340 zł</td>
+        <td>1700 zł</td>
+      </tr>
+      <tr>
+        <td class="param-name">100000 szt.</td>
+        <td>0,1678 zł</td>
+        <td>167,8 zł</td>
+        <td>5034 zł</td>
+        <td>0,34 zł</td>
+        <td>340 zł</td>
+        <td>1700 zł</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="price-summary">
+  <div>
+  <p class="price-summary-netto">Wysyłka w dniu:</p>
+   <span class="price-netto">19/01/2026r.</span>
+</div>
+  <div>
+  <p>Do zapłaty:</p>
+  <p class="price-summary-netto">netto: <span class="price-netto">5034,00 PLN</span></p>
+  <p class="price-summary-netto">brutto: <span class="price-netto">6191,82 PLN</span></p>
+  </div>
+  <a href="#" class="add-to-cart-button"><ion-icon name="add-outline"></ion-icon>
+    <span>Dodaj do koszyka</span></a>
+  <div class="better-price-box">
+  <p>
+    Znalazłeś lepszą cenę za swoje etykiety?
+    <br />
+    <span>Zadzwoń, porozmawiajmy.</span>
+  </p>
+  <a href="tel:+48452442390" class="better-price-tel">
+    <ion-icon name="call-outline"></ion-icon>
+    +48&nbsp;452&nbsp;442&nbsp;390
+  </a>
+</div>
+</div>
+
+        </div>
+
+        <section class="product-description">
+        <div class="additional-information">
+         <a href="#">Opis szczegółowy</a>
+         <a href="#">Galeria</a>
+         <a href="#">Coś jeszcze</a>
+        </div>
+        <h2>Profesjonalne etykiety samoprzylepne – precyzja, jakość i personalizacja</h2>
+      <p>Etykiety samoprzylepne to nie tylko element opakowania – to Twój sposób na skuteczną komunikację marki i profesjonalną prezentację produktu. Oferujemy druk etykiet najwyższej jakości, dopasowany do potrzeb branż takich jak spożywcza, kosmetyczna, chemiczna czy logistyczna. Dzięki nowoczesnym technologiom druku cyfrowego i offsetowego produkujemy etykiety, które wyróżniają się trwałością, idealnym odwzorowaniem kolorów oraz perfekcyjnym wykończeniem.
+      </p>
+        <h2>Druk etykiet na papierze i folii</h2>
+      <p>Drukujemy etykiety na szerokim wyborze materiałów – od papierów półbłyszczących i matowych po folie samoprzylepne odporne na wodę, tłuszcz czy ścieranie. W zależności od zastosowania możesz wybrać klej trwały, odlepny lub specjalistyczny, a także dodać laminację (matową, błyszczącą lub soft touch), aby zwiększyć odporność na czynniki zewnętrzne i nadać produktowi ekskluzywny wygląd.</p>
+        <h2>Dowolny kształt i zadruk CMYK + biały</h2>
+      <p>Wykonujemy etykiety prostokątne, okrągłe, owalne i niestandardowe – wycinane na dowolny kształt. Dzięki drukowi cyfrowemu CMYK (z opcjonalnym kolorem białym) realizujemy nawet krótkie serie w wysokiej jakości bez kosztów matryc czy wykrojników. Nasze etykiety sprawdzają się na butelkach, słoikach, opakowaniach kartonowych i foliowych, a także w zastosowaniach przemysłowych.
+      </p>
+      <h2>Druk etykiet z dostawą – szybko, solidnie, bez kompromisów</h2>
+      <p>Zamów swoje etykiety online – wybierz format, materiał, rodzaj kleju i zadruk, a nasz system automatycznie wyliczy cenę. Wydrukujemy, sprawdzimy i dostarczymy Twoje etykiety bezpośrednio pod wskazany adres. Z nami masz pewność, że Twoje produkty będą wyglądać profesjonalnie i estetycznie od pierwszego spojrzenia.</p>
+      </section>
+       </div>
+       <section class="footer">
+  <div class="footer-container">
+    <div class="footer-zawartosc">
+      <div class="footer-column">
+        <p>produkty</p>
+        <a href="#">Etykiety samoprzylepne</a>
+        <a href="#">Kalkulator etykiet</a>
+        <a href="#">Etykiety na karmę</a>
+        <a href="#">Etykiety na szkło</a>
+        <a href="#">Etykiety ze zmiennymi danymi</a>
+        <a href="#">Etykiety ADR</a>
+      </div>
+     <div class="footer-column">
+        <p>szybka nawigacja</p>
+        <a href="#">Kalkulator etykiet</a>
+        <a href="#">Etykiety z zaokrąglonymi rogami</a>
+        <a href="#">Etykiety okrągłe</a>
+        <a href="#">Etykiety kwadratowe</a>
+        
+      </div>
+        <div class="footer-column">
+        <p>centrum pomocy</p>
+        <a href="#">Rodzaje dostaw</a>
+        <a href="#">Metody płatności</a>
+        <a href="#">Polityka prywatności</a>
+        <a href="#">Zwroty i reklamacje</a>
+      </div>
+     <div class="footer-column">
+        <p>Skontaktuj się</p>
+        <div class="footer-contact">
+  <ion-icon name="phone-portrait-outline"></ion-icon>
+  <div class="contact-info">
+    <span>Zadzwoń do nas</span>
+    <a href="tel:+48123123123">+48 452 442 490</a>
+  </div>
+</div>
+  <div class="footer-contact">
+  <ion-icon name="phone-portrait-outline"></ion-icon>
+  <div class="contact-info">
+    <span>Napisz</span>
+    <a href="mailto:sklep@labelexperts.pl">sklep@labelexperts.pl</a>
+  </div>
+</div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+        <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
