@@ -622,115 +622,177 @@ html {
    SEK CJA "4 ZALETY"
    Nowoczesny layout z frost efektem i lekkim ruchem ikon
    ========================================================= */
+:root {
+  --surface: rgba(255, 255, 255, 0.06);
+  --surface-strong: rgba(255, 255, 255, 0.1);
+  --text: rgba(255, 255, 255, 0.88);
+  --muted: rgba(255, 255, 255, 0.72);
+  --accent1: #8bb4ff;
+  --accent2: #9dd6ff;
+  --ring: 0 0 0 3px rgba(141, 189, 255, 0.25);
+}
 
-/* --- GŁÓWNA SEKCJA --- */
+/* Sekcja tła */
+/* --- SEKCJA GŁÓWNA --- */
 .advantages-banner {
   padding: clamp(2.5rem, 6vw, 5rem) 1rem;
-  background: radial-gradient(
-      120% 120% at 20% 10%,
-      rgba(255, 255, 255, 0.06) 0%,
-      transparent 50%
-    ),
-    radial-gradient(
-      140% 100% at 90% 0%,
-      rgba(255, 255, 255, 0.04) 0%,
-      transparent 60%
-    ),
-    linear-gradient(
-      120deg,
-      var(--penn-blue) 0%,
-      var(--yinmn-blue) 45%,
-      var(--glaucous) 100%
-    );
-  /* Aby zmienić na jasną wersję, zakomentuj powyższy gradient
-     i odkomentuj poniższe: */
-  /* background-color: #f6f8fc; */
+  background: linear-gradient(
+    120deg,
+    var(--penn-blue) 0%,
+    var(--yinmn-blue) 45%,
+    var(--glaucous) 100%
+  );
   position: relative;
   overflow: hidden;
+  color: #fff;
 }
 
-/* --- SIATKA --- */
-.advantages-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: clamp(1.8rem, 3vw, 3rem);
-  max-width: 1300px;
+.advantages-wrap {
+  max-width: 1100px;
   margin: 0 auto;
-  text-align: center;
-  padding: 0 0 3rem 0;
-}
-/* --- KAFEL --- */
-.advantage {
-  background: rgba(255, 255, 255, 0.06); /* subtelny panel */
-  backdrop-filter: blur(6px); /* frost glass */
-  border-radius: 1rem;
-  padding: clamp(2rem, 4vw, 3rem) 1.5rem;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.3s ease;
 }
 
-.advantage:hover {
+/* --- NAGŁÓWEK SEKCJI --- */
+.advantages-intro {
+  text-align: center;
+  margin-bottom: clamp(2rem, 5vw, 3rem);
+}
+
+.advantages-intro h2 {
+  font-size: clamp(1.6rem, 3.6vw, 2.4rem);
+  margin-bottom: 0.4rem;
+}
+
+.advantages-intro p {
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+.advantages-timeline {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(320px, 1fr));
+  gap: clamp(1.6rem, 3vw, 2rem);
+  list-style: none;
+  padding: 0 0 3rem 0;
+  margin: 0;
+}
+.advantage-line {
+  display: contents;
+} /* każdy li = „przepuszczacz” */
+.advantage-card {
+  width: 100%;
+  height: 100%;
+} /* pełna szerokość kolumny */
+.advantage-card {
+  margin: 0 auto;
+  max-width: 760px; /* dostosuj do gustu: 640–840px działa ładnie */
+  width: 100%;
+}
+/* --- KARTA --- */
+.advantage-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(6px);
+  border-radius: 1rem;
+  padding: clamp(1.5rem, 3vw, 2rem);
+  max-width: 500px;
+  transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.advantage-card:hover {
   transform: translateY(-6px);
   background: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.2);
-}
-
-/* --- NAGŁÓWEK --- */
-.advantage-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.8rem;
-  margin-bottom: 1rem;
-  min-height: 56px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
 }
 
 /* --- IKONA --- */
-.advantage-icon {
-  font-size: clamp(2.5rem, 4vw, 3rem);
-  color: var(--secondary-light, #cdd6f8);
+.icon-badge {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: radial-gradient(
+    120% 120% at 30% 20%,
+    rgba(255, 255, 255, 0.18),
+    rgba(255, 255, 255, 0.05)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.18);
   flex-shrink: 0;
-  transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1), color 0.25s ease;
+  transition: transform 0.25s ease;
 }
 
-.advantage-icon ion-icon {
-  font-size: inherit;
-  color: inherit;
-}
-
-/* efekt: lekkie podskoczenie ikony przy hoverze */
-.advantage:hover .advantage-icon {
-  transform: translateY(-6px);
-  color: #ffffff;
-}
-
-/* --- TYTUŁ --- */
-.advantage-title {
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin: 0;
+.icon-badge ion-icon {
+  font-size: 1.6rem;
   color: #fff;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
 }
 
-/* --- OPIS --- */
-.advantage-description {
-  font-size: 1rem;
-  line-height: 1.7;
-  max-width: 300px;
-  margin: 0.75rem auto 0;
-  color: rgba(255, 255, 255, 0.82);
+.advantage-card:hover .icon-badge {
+  transform: translateY(-3px);
 }
 
-/* --- RESPONSYWNOŚĆ --- */
+/* --- TREŚĆ --- */
+.content .title {
+  font-size: clamp(1.1rem, 2.4vw, 1.3rem);
+  margin: 0 0 0.4rem;
+}
+
+.content .desc {
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+  line-height: 1.6;
+}
+/* --- ANIMACJA WEJŚCIA --- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* początkowy stan */
+.advantage-card {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+/* po wejściu do widoku (np. dodane JS-em lub manualnie) */
+.advantage-card.is-visible {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* delikatne opóźnienie dla kolejnych */
+.advantage-line:nth-child(1) .advantage-card {
+  animation-delay: 0.1s;
+}
+.advantage-line:nth-child(2) .advantage-card {
+  animation-delay: 0.3s;
+}
+.advantage-line:nth-child(3) .advantage-card {
+  animation-delay: 0.5s;
+}
+.advantage-line:nth-child(4) .advantage-card {
+  animation-delay: 0.7s;
+}
+/* --- MOBILE --- */
+@media (max-width: 900px) {
+  .advantages-timeline {
+    grid-template-columns: 1fr;
+  }
+}
 @media (max-width: 768px) {
-  .advantage {
-    padding: 2rem 1rem;
+  .advantage-line {
+    justify-content: center;
   }
-  .advantage-title {
-    font-size: 1.15rem;
-  }
-  .advantage-description {
-    font-size: 0.95rem;
+  .advantage-card {
+    max-width: 100%;
   }
 }
 
@@ -919,6 +981,119 @@ html {
   color: var(--eerie-black);
   max-width: 550px;
 }
+/* --- STANY POCZĄTKOWE --- */
+.about-us {
+  overflow: clip;
+} /* bez wyciekania masek */
+.about-us-logo,
+.about-us-text .section-title,
+.about-us-text p {
+  will-change: transform, opacity;
+}
+
+.about-us-logo {
+  opacity: 0;
+  transform: translateY(20px) scale(0.92);
+  filter: saturate(0.9);
+}
+.about-us-text .section-title {
+  opacity: 0;
+  transform: translateX(-24px);
+  /* maska "wipe" */
+  -webkit-mask: linear-gradient(90deg, #000 0 0) text;
+  mask: linear-gradient(90deg, #000 0 0) text;
+  background: linear-gradient(90deg, #fff, #fff);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.about-us-text p {
+  opacity: 0;
+  transform: translateY(22px);
+}
+
+/* --- ANIMACJE --- */
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@keyframes fadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(-24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* efekt wipe na tytule (mask reveal) */
+@keyframes titleWipe {
+  from {
+    -webkit-mask-position: 0% 0;
+    mask-position: 0% 0;
+    -webkit-mask-size: 0% 100%;
+    mask-size: 0% 100%;
+  }
+  to {
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+  }
+}
+
+/* --- AKTYWACJA --- */
+.about-us.is-visible .about-us-logo {
+  animation: popIn 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) 0.05s both;
+  filter: none;
+}
+.about-us.is-visible .about-us-text .section-title {
+  animation: fadeRight 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) 0.15s both,
+    titleWipe 0.8s ease 0.15s both;
+}
+.about-us.is-visible .about-us-text p {
+  animation: fadeUp 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) 0.35s both;
+}
+
+/* delikatny „oddech” dla logotypu po wejściu */
+.about-us.is-visible .about-us-logo img {
+  animation: logoBreath 3.2s ease-in-out 0.9s 2 alternate;
+}
+@keyframes logoBreath {
+  from {
+    transform: scale(1);
+    filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
+  }
+  to {
+    transform: scale(1.015);
+    filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.18));
+  }
+}
+
+/* Respect user settings */
+@media (prefers-reduced-motion: reduce) {
+  .about-us-logo,
+  .about-us-text .section-title,
+  .about-us-text p {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
 
 /* 📱 Responsywność */
 @media (max-width: 900px) {
@@ -935,6 +1110,118 @@ html {
     margin-bottom: 2rem;
   }
 }
+/* globalne timingi – łatwo potem korygować */
+:root {
+  --enter-dur: 1s; /* było ~0.7s */
+  --enter-ease: cubic-bezier(0.22, 0.8, 0.24, 1); /* miękki, sprężysty */
+  --delay-logo: 160ms;
+  --delay-title: 320ms;
+  --delay-text: 520ms;
+}
+
+/* klatki z krótkim „holdem”, żeby wejście nie zaczynało się od razu */
+@keyframes popInSlow {
+  0% {
+    opacity: 0;
+    transform: translateY(26px) scale(0.9);
+  }
+  20% {
+    opacity: 0.01;
+    transform: translateY(26px) scale(0.9);
+  } /* krótki pauza */
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@keyframes fadeRightSlow {
+  0% {
+    opacity: 0;
+    transform: translateX(-28px);
+  }
+  18% {
+    opacity: 0.01;
+    transform: translateX(-28px);
+  } /* krótki pauza */
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeUpSlow {
+  0% {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  18% {
+    opacity: 0.01;
+    transform: translateY(28px);
+  } /* krótki pauza */
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* subtelny „oddech” po wejściu (nie nachalny) */
+@keyframes logoBreathSlow {
+  0% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
+  }
+  100% {
+    transform: scale(1.01);
+    filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.14));
+  }
+}
+
+/* zastosowanie */
+.about-us.is-visible .about-us-logo {
+  animation: popInSlow var(--enter-dur) var(--enter-ease) var(--delay-logo) both,
+    logoBreathSlow 2.8s ease-in-out calc(var(--delay-logo) + var(--enter-dur)) 2
+      alternate;
+}
+.about-us.is-visible .about-us-text .section-title {
+  /* jeśli używasz „wipe”, zostaw go – tu tylko timing */
+  animation: fadeRightSlow var(--enter-dur) var(--enter-ease) var(--delay-title)
+    both;
+}
+.about-us.is-visible .about-us-text p {
+  animation: fadeUpSlow var(--enter-dur) var(--enter-ease) var(--delay-text)
+    both;
+}
+
+/* na wszelki wypadek — stan początkowy, żeby nie migało */
+.about-us-logo {
+  opacity: 0;
+  transform: translateY(26px) scale(0.9);
+}
+.about-us-text .section-title {
+  opacity: 0;
+  transform: translateX(-28px);
+}
+.about-us-text p {
+  opacity: 0;
+  transform: translateY(28px);
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --enter-dur: 0ms;
+    --delay-logo: 0ms;
+    --delay-title: 0ms;
+    --delay-text: 0ms;
+  }
+  .about-us-logo,
+  .about-us-text .section-title,
+  .about-us-text p {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
 .footer {
   background: radial-gradient(
       120% 120% at 20% 10%,

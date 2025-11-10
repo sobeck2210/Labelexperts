@@ -231,12 +231,11 @@
     </div>
 
     <div class="contact-map">
-<iframe
-  width="425"
-  height="350"
-  style="border: 1px solid black"
-  src="https://www.openstreetmap.org/export/embed.html?bbox=17.08530128002167%2C52.41330808563483%2C17.08884179592133%2C52.414917922782294&layer=mapnik&marker=52.414113%2C17.087072">
-</iframe>
+<div id="map" style="height: 1000px; border-radius: 16px;"></div>
+
+<script src="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.js"></script>
+<link href="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.css" rel="stylesheet" />
+
     </div>
   </div>
 </section>
@@ -297,5 +296,17 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+    <script>
+  const map = new maplibregl.Map({
+    container: 'map',
+    style: 'https://basemaps.cartocdn.com/gl/positron-gl-style/style.json',
+    center: [17.087072, 52.414113],
+    zoom: 16
+  });
+
+  new maplibregl.Marker({ color: '#8c7fff' })
+    .setLngLat([17.087072, 52.414113])
+    .addTo(map);
+</script>
   </body>
 </html>
