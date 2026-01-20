@@ -5,7 +5,7 @@
 }
 html {
   font-size: 16px;
-  font-family: "Work Sans", sans-serif;
+  font-family: "Mulish", sans-serif;
   font-weight: 500;
   color: #1e1d1b;
 }
@@ -17,7 +17,7 @@ html {
   --savoy-blue: #5360a1;
   --cta: #8c7fff;
 
-  --font-base: "Work Sans", sans-serif;
+  --font-base: "Mulish", sans-serif;
 }
 .padding-section {
   padding: 3rem 0 3rem 0;
@@ -66,7 +66,7 @@ html {
 }
 .panel_header_link {
   font-size: 1rem;
-  font-family: "Work Sans", sans-serif;
+  font-family: "Mulish", sans-serif;
   text-decoration: none;
   font-weight: 500;
   color: var(--yinmn-blue);
@@ -107,7 +107,7 @@ html {
   border: 1px solid rgba(113, 118, 183, 0.3); /* glaucous */
   border-radius: 0.3rem;
   background-color: rgba(255, 255, 255, 0.9);
-  font-family: "Work Sans", sans-serif;
+  font-family: "Mulish", sans-serif;
   font-size: 0.95rem;
   color: var(--eerie-black);
   transition: all 0.2s ease;
@@ -134,7 +134,9 @@ html {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  transition: color 0.2s ease, background-color 0.2s ease;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease;
 }
 
 .search-btn:hover {
@@ -149,7 +151,7 @@ html {
   align-items: center;
   justify-content: flex-end; /* wszystko obok siebie, po prawej stronie */
   gap: 2rem; /* odstęp między telefonem, mailem, koszykiem */
-  font-family: "Work Sans", sans-serif;
+  font-family: "Mulish", sans-serif;
   color: var(--eerie-black);
 }
 .header_info_for_client {
@@ -157,7 +159,7 @@ html {
   align-items: center;
   justify-content: flex-end;
   gap: 2rem;
-  font-family: "Work Sans", sans-serif;
+  font-family: "Mulish", sans-serif;
   color: var(--eerie-black);
 }
 /* Bloki telefonu i maila */
@@ -213,7 +215,9 @@ html {
   color: var(--yinmn-blue);
   font-size: 3rem;
   cursor: pointer;
-  transition: color 0.2s ease, transform 0.15s ease;
+  transition:
+    color 0.2s ease,
+    transform 0.15s ease;
 }
 
 .header_cart:hover {
@@ -221,7 +225,8 @@ html {
   transform: scale(1.05);
 }
 .navigation {
-  background: radial-gradient(
+  background:
+    radial-gradient(
       120% 120% at 20% 10%,
       rgba(255, 255, 255, 0.06) 0%,
       transparent 50%
@@ -244,7 +249,7 @@ html {
   max-width: 1440px;
   margin: 0 auto;
   padding: 1rem;
-  font-family: "Work Sans", sans-serif;
+  font-family: "Mulish", sans-serif;
   justify-content: center;
 }
 .nav__list {
@@ -279,7 +284,7 @@ html {
   text-decoration: none;
   cursor: pointer;
   transition: all 0.2s ease;
-  font-family: "Work Sans", sans-serif;
+  font-family: "Mulish", sans-serif;
 }
 
 .nav__link:hover {
@@ -314,7 +319,9 @@ html {
   color: var(--eerie-black);
   text-decoration: none;
   font-size: 0.95rem;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
 }
 
 .nav__dropdown a:hover {
@@ -372,7 +379,8 @@ html {
   position: absolute;
   inset: 0;
   /* gradient + subtelna winieta */
-  background: radial-gradient(
+  background:
+    radial-gradient(
       120% 120% at 20% 10%,
       rgba(255, 255, 255, 0.06) 0%,
       transparent 50%
@@ -405,7 +413,7 @@ html {
 
 .hero__copy {
   max-width: 680px;
-  font-family: "Work Sans", sans-serif;
+  font-family: "Mulish", sans-serif;
   padding-left: 6rem;
 }
 .hero__eyebrow {
@@ -444,7 +452,10 @@ html {
   border-radius: 0.9rem;
   font-weight: 700;
   text-decoration: none;
-  transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease,
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease,
     color 0.2s ease;
   will-change: transform;
 }
@@ -494,6 +505,95 @@ html {
   width: 100%;
   height: 120px;
   color: #fff;
+}
+/* BENEFITS BAR (pasek na dole hero) */
+.hero {
+  position: relative; /* ważne dla absolutnego paska */
+  overflow: visible;
+  margin-bottom: 4.5rem;
+}
+
+/* zrób miejsce na pasek, żeby nie nachodził na treść */
+.hero__inner {
+  padding-bottom: clamp(5.2rem, 7vw, 6.8rem);
+}
+
+.hero__benefits {
+  position: absolute;
+  position: absolute;
+  left: 50%;
+  bottom: clamp(-34px, -3vw, -22px); /* klucz: ujemny bottom */
+  transform: translateX(-50%);
+  width: min(1100px, calc(100% - 2rem));
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(0.8rem, 2vw, 1.2rem);
+
+  background: #fff;
+  color: var(--eerie-black);
+  border-radius: 1.25rem;
+  padding: clamp(0.9rem, 2.2vw, 1.2rem);
+  /* box-shadow: 0 18px 45px rgba(12, 21, 71, 0.22); */
+  backdrop-filter: blur(10px);
+}
+
+.hero__benefit {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 0.9rem;
+  align-items: center;
+  min-height: 56px;
+}
+
+.hero__benefit-ico {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 0.9rem;
+  background: rgba(12, 21, 71, 0.06);
+  color: var(--penn-blue);
+}
+
+.hero__benefit-txt strong {
+  display: block;
+  font-weight: 800;
+  line-height: 1.1;
+  font-family: "Mulish", sans-serif;
+}
+
+.hero__benefit-txt span {
+  display: block;
+  font-size: 0.95rem;
+  opacity: 0.75;
+  margin-top: 0.15rem;
+}
+
+/* responsywność: 3 -> 1 kolumna */
+@media (max-width: 1024px) {
+  .hero__benefits {
+    position: static;
+    transform: none;
+    width: min(900px, calc(100% - 2rem));
+    margin: 0 auto 1.25rem;
+  }
+
+  .hero__inner {
+    padding-bottom: clamp(
+      1.2rem,
+      3vw,
+      2rem
+    ); /* już nie trzeba rezerwować miejsca */
+  }
+
+  .hero__benefits {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__benefit {
+    grid-template-columns: 44px 1fr;
+  }
 }
 
 /* RESPONSYWNOŚĆ */
@@ -573,7 +673,9 @@ html {
   object-fit: cover;
   display: block;
   filter: brightness(40%);
-  transition: transform 0.4s ease, filter 0.4s ease;
+  transition:
+    transform 0.4s ease,
+    filter 0.4s ease;
 }
 
 .product-tile-xl:hover img {
@@ -609,7 +711,9 @@ html {
   background-color: var(--cta);
   font-weight: 600;
   border-radius: 6px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
 }
 
 .product-tile-xl:hover .product-tile-btn {
@@ -630,7 +734,9 @@ html {
   border-radius: 0.5rem;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   text-decoration: none;
   color: white;
 }
@@ -641,7 +747,9 @@ html {
   object-fit: cover;
   display: block;
   filter: brightness(30%);
-  transition: transform 0.4s ease, filter 0.4s ease;
+  transition:
+    transform 0.4s ease,
+    filter 0.4s ease;
 }
 
 .product-tile-small:hover img {
@@ -744,7 +852,10 @@ html {
   border-radius: 1rem;
   padding: clamp(1.5rem, 3vw, 2rem);
   max-width: 500px;
-  transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -910,7 +1021,9 @@ html {
   font-size: 1.1rem;
   font-weight: 500;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
   cursor: pointer;
   will-change: transform; /* lepsza płynność kafla */
 }
@@ -922,7 +1035,9 @@ html {
   height: 100%;
   object-fit: cover;
   filter: brightness(40%);
-  transition: transform 0.35s ease, filter 0.35s ease;
+  transition:
+    transform 0.35s ease,
+    filter 0.35s ease;
   z-index: 1;
 }
 
@@ -939,7 +1054,10 @@ html {
   transform: translateY(0);
   opacity: 0.88;
   will-change: transform, opacity, color;
-  transition: transform 0.28s ease, opacity 0.28s ease, color 0.28s ease;
+  transition:
+    transform 0.28s ease,
+    opacity 0.28s ease,
+    color 0.28s ease;
   backface-visibility: hidden;
 }
 
@@ -1108,7 +1226,8 @@ html {
   filter: none;
 }
 .about-us.is-visible .about-us-text .section-title {
-  animation: fadeRight 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) 0.15s both,
+  animation:
+    fadeRight 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) 0.15s both,
     titleWipe 0.8s ease 0.15s both;
 }
 .about-us.is-visible .about-us-text p {
@@ -1223,7 +1342,8 @@ html {
 
 /* zastosowanie */
 .about-us.is-visible .about-us-logo {
-  animation: popInSlow var(--enter-dur) var(--enter-ease) var(--delay-logo) both,
+  animation:
+    popInSlow var(--enter-dur) var(--enter-ease) var(--delay-logo) both,
     logoBreathSlow 2.8s ease-in-out calc(var(--delay-logo) + var(--enter-dur)) 2
       alternate;
 }
@@ -1269,7 +1389,8 @@ html {
 }
 
 .footer {
-  background: radial-gradient(
+  background:
+    radial-gradient(
       120% 120% at 20% 10%,
       rgba(255, 255, 255, 0.06) 0%,
       transparent 50%
@@ -1478,7 +1599,10 @@ html {
   font-size: 1.4rem;
   color: var(--penn-blue);
   opacity: 0.65;
-  transition: color 0.25s ease, opacity 0.25s ease, transform 0.25s ease;
+  transition:
+    color 0.25s ease,
+    opacity 0.25s ease,
+    transform 0.25s ease;
 }
 
 .info-icon:hover ion-icon {
@@ -1504,7 +1628,9 @@ html {
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.25s ease, transform 0.25s ease;
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
   z-index: 10;
 }
 
@@ -1558,7 +1684,9 @@ html {
   opacity: 0;
   visibility: hidden;
   transform: translateY(-6px);
-  transition: opacity 0.25s ease, transform 0.25s ease;
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
   z-index: 10;
 }
 
@@ -1568,7 +1696,9 @@ html {
   color: var(--penn-blue);
   font-size: 0.95rem;
   text-align: left;
-  transition: background 0.2s ease, color 0.2s ease;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
 }
 
 .dropdown li:hover {
@@ -1610,7 +1740,7 @@ html {
   box-shadow: 0 0 0 3px rgba(113, 118, 183, 0.25);
   font-size: 1rem;
   width: 150px;
-  font-family: "Work Sans", sans-serif;
+  font-family: "Mulish", sans-serif;
 }
 
 /* Tabela cen */
@@ -1679,7 +1809,7 @@ html {
   border-radius: 1rem;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
   color: var(--penn-blue);
-  font-family: "Work Sans", sans-serif;
+  font-family: "Mulish", sans-serif;
 }
 
 .price-summary p {
@@ -1738,7 +1868,7 @@ html {
 
   transition: all 0.3s ease;
   cursor: pointer;
-  font-family: "Work Sans", sans-serif;
+  font-family: "Mulish", sans-serif;
 }
 
 .add-to-cart-button ion-icon {
@@ -1860,7 +1990,7 @@ html {
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
   color: var(--penn-blue);
   line-height: 1.75;
-  font-family: "Work Sans", sans-serif;
+  font-family: "Mulish", sans-serif;
 }
 
 /* --- NAGŁÓWKI --- */
@@ -1902,7 +2032,9 @@ html {
   color: var(--yinmn-blue);
   text-decoration: underline;
   text-decoration-color: rgba(46, 80, 144, 0.3);
-  transition: color 0.25s ease, text-decoration-color 0.25s ease;
+  transition:
+    color 0.25s ease,
+    text-decoration-color 0.25s ease;
 }
 
 .product-description a:hover {
@@ -1982,7 +2114,7 @@ html {
 
 /* PRAWA: formularz */
 .pnc-quote {
-  font-family: "Work Sans", sans-serif;
+  font-family: "Mulish", sans-serif;
   border: 1px solid var(--line);
   background: var(--cta-bg);
   border-radius: 1rem;
@@ -2051,7 +2183,7 @@ html {
   gap: 1rem;
 }
 .pnc-btn {
-  font-family: "Work Sans", sans-serif;
+  font-family: "Mulish", sans-serif;
   background: var(--cta);
   color: #fff;
   font-weight: 700;
@@ -2262,7 +2394,9 @@ html {
   border: 0;
   border-radius: 0.8rem;
   cursor: pointer;
-  transition: background 0.2s ease, transform 0.1s ease;
+  transition:
+    background 0.2s ease,
+    transform 0.1s ease;
 }
 .cf-btn:hover {
   background: #7a6aff;
@@ -2299,7 +2433,8 @@ html {
   overflow: hidden;
   color: #fff;
 
-  background: radial-gradient(
+  background:
+    radial-gradient(
       120% 120% at 20% 10%,
       rgba(255, 255, 255, 0.06) 0%,
       transparent 50%
@@ -2365,7 +2500,9 @@ html {
   flex-shrink: 0;
   opacity: 0.9;
   filter: brightness(0) invert(1); /* jeśli chcesz białe logo */
-  transition: transform 0.25s ease, opacity 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
 }
 
 .trusted-track img:hover {
@@ -2447,7 +2584,9 @@ html {
   padding: 12px 16px;
   font-size: 15px;
   outline: none;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
   background-color: #f9fafb;
 }
 
@@ -2472,7 +2611,10 @@ html {
   font-size: 15px;
   outline: none;
   background-color: #f9fafb;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
 }
 
 .newsletter-form input[type="email"]:focus {
@@ -2544,7 +2686,11 @@ html {
   border-radius: 16px;
   box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
   padding: 2.5rem 2.25rem 2rem;
-  font-family: "Work Sans", system-ui, -apple-system, BlinkMacSystemFont,
+  font-family:
+    "Mulish",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
     sans-serif;
 }
 
@@ -2573,7 +2719,9 @@ html {
   color: rgba(30, 29, 27, 0.6);
   border-bottom: 2px solid transparent;
   cursor: pointer;
-  transition: color 0.2s ease, border-color 0.2s ease;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .tab.active {
@@ -2612,7 +2760,10 @@ html {
   background-color: #f9fafb;
   color: var(--eerie-black);
   outline: none;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
 }
 
 .tab-content input::placeholder {
@@ -2732,14 +2883,19 @@ html {
 /* --- Designerski blog --- */
 
 .blog-page {
-  font-family: "Work Sans", system-ui, -apple-system, BlinkMacSystemFont,
+  font-family:
+    "Mulish",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
     sans-serif;
 }
 
 /* HERO */
 
 .blog-page--design .blog-hero {
-  background: radial-gradient(
+  background:
+    radial-gradient(
       120% 120% at 20% 10%,
       rgba(255, 255, 255, 0.06) 0%,
       transparent 50%
@@ -2828,7 +2984,10 @@ html {
   background: #fff;
   color: rgba(30, 29, 27, 0.8);
   cursor: pointer;
-  transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease,
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease,
     border-color 0.2s ease;
 }
 
@@ -2877,7 +3036,9 @@ html {
   border-radius: 18px;
   overflow: hidden;
   box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
   height: 100%;
 }
 
